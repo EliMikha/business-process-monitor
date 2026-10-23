@@ -515,6 +515,11 @@ a.button {
   position: relative;
 }
 
+/* Заголовок получает программный фокус при смене страницы, без рамки контрола. */
+.page-title:focus-visible {
+  outline: none;
+}
+
 .progress-indicator .field-label {
   display: block;
   padding-inline-end: 3rem;
