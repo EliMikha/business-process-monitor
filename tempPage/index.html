@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Просмотр состояния учебных бизнес-процессов: этапы, статусы, прогресс и ответственные.">
+    <title>Бизнес-процессы | Business Process Monitor</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body id="top">
+    <a href="#main-content">Перейти к основному содержимому</a>
+    <header class="container">
+      <p><strong>Business Process Monitor</strong></p>
+      <nav aria-label="Основная навигация">
+        <a href="#processes">К списку процессов</a>
+      </nav>
+    </header>
+
+    <main id="main-content" class="container">
+      <h1>Бизнес-процессы</h1>
+      <p>Отслеживайте выполнение и поддерживайте сведения в актуальном состоянии.</p>
+
+      <section id="processes" aria-labelledby="processes-title">
+        <h2 id="processes-title">Текущие процессы</h2>
+        <ul class="process-list">
+          <li>
+          <article class="process-card" aria-labelledby="order-title">
+            <h3 id="order-title">Обработка заказа</h3>
+            <dl>
+              <dt>Текущий этап</dt>
+              <dd>Подготовка к отправке</dd>
+              <dt>Статус</dt>
+              <dd>Выполняется</dd>
+              <dt>Прогресс выполнения</dt>
+              <dd>50% <progress value="50" max="100" aria-label="Прогресс процесса «Обработка заказа»">50%</progress></dd>
+              <dt>Ответственный</dt>
+              <dd>Анна Сергеева</dd>
+            </dl>
+            <button type="button" disabled aria-label="Подробнее о процессе «Обработка заказа»">Подробнее</button>
+          </article>
+          </li>
+          <li>
+          <article class="process-card" aria-labelledby="purchase-title">
+            <h3 id="purchase-title">Согласование закупки</h3>
+            <dl>
+              <dt>Текущий этап</dt>
+              <dd>Проверка бюджета</dd>
+              <dt>Статус</dt>
+              <dd>Заблокирован</dd>
+              <dt>Прогресс выполнения</dt>
+              <dd>40% <progress value="40" max="100" aria-label="Прогресс процесса «Согласование закупки»">40%</progress></dd>
+              <dt>Ответственный</dt>
+              <dd>Михаил Орлов</dd>
+            </dl>
+            <button type="button" disabled aria-label="Подробнее о процессе «Согласование закупки»">Подробнее</button>
+          </article>
+          </li>
+          <li>
+          <article class="process-card" aria-labelledby="hire-title">
+            <h3 id="hire-title">Приём сотрудника</h3>
+            <dl>
+              <dt>Текущий этап</dt>
+              <dd>Подготовка документов</dd>
+              <dt>Статус</dt>
+              <dd>Не начат</dd>
+              <dt>Прогресс выполнения</dt>
+              <dd>0% <progress value="0" max="100" aria-label="Прогресс процесса «Приём сотрудника»">0%</progress></dd>
+              <dt>Ответственный</dt>
+              <dd>Елена Соколова</dd>
+            </dl>
+            <button type="button" disabled aria-label="Подробнее о процессе «Приём сотрудника»">Подробнее</button>
+          </article>
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="container">
+      <p>Business Process Monitor. Учебный проект. Демонстрационные данные.</p>
+    </footer>
+  </body>
+</html>
