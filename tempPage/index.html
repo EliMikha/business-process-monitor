@@ -8,74 +8,124 @@
     <link rel="stylesheet" href="styles.css">
   </head>
   <body id="top">
-    <a href="#main-content">Перейти к основному содержимому</a>
-    <header class="container">
-      <p><strong>Business Process Monitor</strong></p>
-      <nav aria-label="Основная навигация">
-        <a href="#processes">К списку процессов</a>
-      </nav>
+    <a class="skip-link" href="#main-content">Перейти к основному содержимому</a>
+    <header class="site-header">
+      <div class="container header-content">
+        <p class="brand">
+          <span class="brand-mark" aria-hidden="true">BP</span>
+          <strong class="brand-name">Business Process Monitor</strong>
+        </p>
+        <nav class="site-nav" aria-label="Основная навигация">
+          <a class="nav-link" href="#processes">К списку процессов</a>
+        </nav>
+      </div>
     </header>
 
-    <main id="main-content" class="container">
-      <h1>Бизнес-процессы</h1>
-      <p>Отслеживайте выполнение и поддерживайте сведения в актуальном состоянии.</p>
-
-      <section id="processes" aria-labelledby="processes-title">
-        <h2 id="processes-title">Текущие процессы</h2>
+    <main id="main-content" class="container main-content" tabindex="-1">
+      <p class="eyebrow">Рабочее пространство</p>
+      <h1 class="page-title">Бизнес-процессы</h1>
+      <p class="page-description">Отслеживайте выполнение и поддерживайте сведения в актуальном состоянии.</p>
+      <section id="processes" class="process-section" aria-labelledby="processes-title">
+        <h2 id="processes-title" class="visually-hidden">Текущие процессы</h2>
         <ul class="process-list">
-          <li>
-          <article class="process-card" aria-labelledby="order-title">
-            <h3 id="order-title">Обработка заказа</h3>
-            <dl>
-              <dt>Текущий этап</dt>
-              <dd>Подготовка к отправке</dd>
-              <dt>Статус</dt>
-              <dd>Выполняется</dd>
-              <dt>Прогресс выполнения</dt>
-              <dd>50% <progress value="50" max="100" aria-label="Прогресс процесса «Обработка заказа»">50%</progress></dd>
-              <dt>Ответственный</dt>
-              <dd>Анна Сергеева</dd>
-            </dl>
-            <button type="button" disabled aria-label="Подробнее о процессе «Обработка заказа»">Подробнее</button>
-          </article>
+          <li class="process-item">
+            <article class="process-card" aria-labelledby="order-title">
+              <p class="process-number">Процесс 01</p>
+              <dl class="process-status-list">
+                <dt class="visually-hidden">Статус</dt>
+                <dd class="status status--in-progress">
+                  <img class="status-dot" src="assets/status-in-progress.svg" width="5" height="5" alt="">
+                  Выполняется
+                </dd>
+              </dl>
+              <h3 id="order-title" class="process-title">Обработка заказа</h3>
+              <dl class="process-details">
+                <div class="process-field">
+                  <dt class="field-label">Текущий этап</dt>
+                  <dd class="stage-name">Подготовка к отправке</dd>
+                </div>
+                <div class="process-field process-field--progress">
+                  <dt class="field-label">Прогресс выполнения</dt>
+                  <dd class="progress-details">
+                    <span class="progress-value">50%</span>
+                    <progress class="process-progress" value="50" max="100" aria-label="Прогресс процесса «Обработка заказа»">50%</progress>
+                  </dd>
+                </div>
+                <div class="process-field process-field--responsible">
+                  <dt class="field-label">Ответственный</dt>
+                  <dd class="responsible-name"><span class="avatar" aria-hidden="true">АС</span>Анна Сергеева</dd>
+                </div>
+              </dl>
+              <button class="button button--primary" type="button" disabled aria-label="Подробнее о процессе «Обработка заказа»">Подробнее</button>
+            </article>
           </li>
-          <li>
-          <article class="process-card" aria-labelledby="purchase-title">
-            <h3 id="purchase-title">Согласование закупки</h3>
-            <dl>
-              <dt>Текущий этап</dt>
-              <dd>Проверка бюджета</dd>
-              <dt>Статус</dt>
-              <dd>Заблокирован</dd>
-              <dt>Прогресс выполнения</dt>
-              <dd>40% <progress value="40" max="100" aria-label="Прогресс процесса «Согласование закупки»">40%</progress></dd>
-              <dt>Ответственный</dt>
-              <dd>Михаил Орлов</dd>
-            </dl>
-            <button type="button" disabled aria-label="Подробнее о процессе «Согласование закупки»">Подробнее</button>
-          </article>
+          <li class="process-item">
+            <article class="process-card" aria-labelledby="purchase-title">
+              <p class="process-number">Процесс 02</p>
+              <dl class="process-status-list">
+                <dt class="visually-hidden">Статус</dt>
+                <dd class="status status--blocked">
+                  <img class="status-dot" src="assets/status-blocked.svg" width="5" height="5" alt="">
+                  Заблокирован
+                </dd>
+              </dl>
+              <h3 id="purchase-title" class="process-title">Согласование закупки</h3>
+              <dl class="process-details">
+                <div class="process-field">
+                  <dt class="field-label">Текущий этап</dt>
+                  <dd class="stage-name">Проверка бюджета</dd>
+                </div>
+                <div class="process-field process-field--progress">
+                  <dt class="field-label">Прогресс выполнения</dt>
+                  <dd class="progress-details">
+                    <span class="progress-value">40%</span>
+                    <progress class="process-progress" value="40" max="100" aria-label="Прогресс процесса «Согласование закупки»">40%</progress>
+                  </dd>
+                </div>
+                <div class="process-field process-field--responsible">
+                  <dt class="field-label">Ответственный</dt>
+                  <dd class="responsible-name"><span class="avatar" aria-hidden="true">МО</span>Михаил Орлов</dd>
+                </div>
+              </dl>
+              <button class="button button--primary" type="button" disabled aria-label="Подробнее о процессе «Согласование закупки»">Подробнее</button>
+            </article>
           </li>
-          <li>
-          <article class="process-card" aria-labelledby="hire-title">
-            <h3 id="hire-title">Приём сотрудника</h3>
-            <dl>
-              <dt>Текущий этап</dt>
-              <dd>Подготовка документов</dd>
-              <dt>Статус</dt>
-              <dd>Не начат</dd>
-              <dt>Прогресс выполнения</dt>
-              <dd>0% <progress value="0" max="100" aria-label="Прогресс процесса «Приём сотрудника»">0%</progress></dd>
-              <dt>Ответственный</dt>
-              <dd>Елена Соколова</dd>
-            </dl>
-            <button type="button" disabled aria-label="Подробнее о процессе «Приём сотрудника»">Подробнее</button>
-          </article>
+          <li class="process-item">
+            <article class="process-card" aria-labelledby="hire-title">
+              <p class="process-number">Процесс 03</p>
+              <dl class="process-status-list">
+                <dt class="visually-hidden">Статус</dt>
+                <dd class="status status--not-started">
+                  <img class="status-dot" src="assets/status-not-started.svg" width="5" height="5" alt="">
+                  Не начат
+                </dd>
+              </dl>
+              <h3 id="hire-title" class="process-title">Приём сотрудника</h3>
+              <dl class="process-details">
+                <div class="process-field">
+                  <dt class="field-label">Текущий этап</dt>
+                  <dd class="stage-name">Подготовка документов</dd>
+                </div>
+                <div class="process-field process-field--progress">
+                  <dt class="field-label">Прогресс выполнения</dt>
+                  <dd class="progress-details">
+                    <span class="progress-value">0%</span>
+                    <progress class="process-progress" value="0" max="100" aria-label="Прогресс процесса «Приём сотрудника»">0%</progress>
+                  </dd>
+                </div>
+                <div class="process-field process-field--responsible">
+                  <dt class="field-label">Ответственный</dt>
+                  <dd class="responsible-name"><span class="avatar" aria-hidden="true">ЕС</span>Елена Соколова</dd>
+                </div>
+              </dl>
+              <button class="button button--primary" type="button" disabled aria-label="Подробнее о процессе «Приём сотрудника»">Подробнее</button>
+            </article>
           </li>
         </ul>
       </section>
     </main>
 
-    <footer class="container">
+    <footer class="container site-footer">
       <p>Business Process Monitor. Учебный проект. Демонстрационные данные.</p>
     </footer>
   </body>
