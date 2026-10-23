@@ -63,5 +63,6 @@ Codex/ChatGPT использовался для анализа документ�
 
 ## 7. Репозиторий
 
-https://github.com/EliMikha/business-process-monitor
+Логические этапы зафиксированы отдельными коммитами. Изменения отправлены командой git push origin main; совпадение локального и удалённого коммита, а также опубликованных исходников подтверждено.
 
+https://github.com/EliMikha/business-process-monitor
