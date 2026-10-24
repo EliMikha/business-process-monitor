@@ -1,9 +1,16 @@
 import { Link } from 'react-router';
 
 export default function Layout({ children }) {
+  function skipToContent(event) {
+    event.preventDefault();
+    const main = document.getElementById('main-content');
+    main?.focus();
+    main?.scrollIntoView();
+  }
+
   return (
     <>
-      <a className="skip-link" href="#main-content">Перейти к основному содержимому</a>
+      <a className="skip-link" href="#main-content" onClick={skipToContent}>Перейти к основному содержимому</a>
       <header className="site-header">
         <div className="container header-content">
           <p className="brand">
